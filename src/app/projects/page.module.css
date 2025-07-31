@@ -49,10 +49,6 @@
   cursor: pointer;
 }
 
-.createButton:hover {
-  background: #45a045;
-}
-
 .error {
   color: #ff6b6b;
 }
@@ -69,4 +65,20 @@
 
 .deleteButton {
   color: #e74c3c;
+}
+
+.returnButton {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  width: 100%;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  float: right;
+}
+
+.returnButton:hover {
+  background: darkred;
 }

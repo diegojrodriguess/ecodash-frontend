@@ -77,6 +77,13 @@ export default function ProjectsPage() {
         >
           + Criar novo projeto
         </button>
+
+        <button
+          className={styles.returnButton}
+          onClick={() => router.push('/')}
+        >
+          Voltar
+        </button>
       </aside>
 
       <section className={styles.map}>

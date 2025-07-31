@@ -154,6 +154,14 @@ export default function EditProjectPage() {
         <button type="submit" className={styles.button}>
           {id ? 'Atualizar' : 'Criar'}
         </button>
+
+        <button
+          type="button"
+          className={styles.returnButton}
+          onClick={() => router.push('/projects')}
+        >
+          Voltar
+        </button>
       </form>
     </main>
   );

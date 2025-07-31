@@ -69,6 +69,14 @@ export default function EditResearcherPage() {
         <button type="submit" className={styles.button}>
           {id ? 'Atualizar' : 'Criar'}
         </button>
+
+        <button
+          type="button"
+          className={styles.returnButton}
+          onClick={() => router.push('/researchers')}
+        >
+          Voltar
+        </button>
       </form>
     </main>
   );

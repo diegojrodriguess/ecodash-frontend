@@ -74,6 +74,13 @@ export default function ResearchersPage() {
         <button onClick={handleCreate} className={styles.createButton}>
           + Criar novo pesquisador
         </button>
+
+        <button
+          className={styles.returnButton}
+          onClick={() => window.location.href = '/'}
+        >
+          Voltar
+        </button>
       </div>
     </main>
   );
