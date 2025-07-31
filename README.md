@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 🌱 Ecodash Frontend
 
-First, run the development server:
+Interface web do Ecodash, uma plataforma para gerenciamento de projetos ambientais e seus respectivos pesquisadores.
+
+Este projeto foi desenvolvido com [Next.js](https://nextjs.org/), React e Leaflet para visualização geográfica dos projetos.
+
+---
+
+## ✅ Tecnologias
+
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [React Leaflet](https://react-leaflet.js.org/) (visualização de mapas)
+- [React Select](https://react-select.com/home) (autocomplete)
+- [TypeScript](https://www.typescriptlang.org/)
+- [CSS Modules](https://nextjs.org/docs/app/building-your-application/styling/css-modules)
+
+---
+
+## ⚙️ Requisitos
+
+- Node.js (v18+)
+- NPM
+
+> ⚠️ **Atenção:** é necessário que o [servidor backend](https://github.com/diegojrodriguess/ecodash-backend) esteja rodando **antes** de iniciar o frontend, pois a aplicação consome a API do Ecodash para exibir e gerenciar os dados.
+
+As instruções para rodar o backend estão disponíveis no [README do repositório oficial](https://github.com/diegojrodriguess/ecodash-backend).
+
+---
+
+## 🚀 Instalação e Execução
+
+### 1. Clonar o repositório
+
+```bash
+git clone https://github.com/seu-usuario/ecodash-frontend.git
+cd ecodash-frontend
+```
+
+### 2. Instalar dependências
+
+```bash
+npm install
+```
+
+### 3. Iniciar o servidor de desenvolvimento
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse a aplicação em:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3001
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧭 Funcionalidades
 
-To learn more about Next.js, take a look at the following resources:
+- Listagem de pesquisadores e projetos
+- Criação, edição e remoção de registros
+- Visualização dos projetos no mapa (GeoJSON)
+- Preenchimento automatizado com **autocomplete** na escolha de pesquisadores
+- Usabilidade aprimorada no formulário de projetos com **marcação geográfica no mapa**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔍 Estrutura de Pastas
 
-## Deploy on Vercel
+```bash
+src/
+  app/
+    researchers/       # Listagem e edição de pesquisadores
+    projects/          # Listagem, mapa e edição de projetos
+    page.tsx           # Tela inicial (navegação)
+  styles/              # Estilos globais e componentes
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## 🧭 Navegação Inicial
+
+Ao iniciar o frontend, você encontrará dois botões principais:
+
+- **Projetos**
+- **Pesquisadores**
+
+Eles redirecionam para suas respectivas telas de listagem, onde é possível editar, excluir e visualizar os dados.
+
+---
+
+## 📌 Observações
+
+- A comunicação com a API se dá via `fetch` para `http://localhost:3000`, portanto certifique-se de que o backend esteja rodando localmente nesta porta.
+
